@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<link rel="stylesheet"type="text/css"href="style.css">
+
+ <head>
+  <meta charset="UTF-8">
+     <title>CSS 課題</title>
+ </head>
+ 
+ <body>
+  <h1>お問い合わせフォーム</h1>
+     
+  <div class="box">
+  <form method="post" action="mail_confirm.php">
+     <label>名前</label><br>
+     <input type="text" size="35" name="name"><br>
+     <label>メールアドレス</label><br>
+     <input type="text" size="35" name="mail"><br>
+     <label>年齢</label><br>
+     <select name="age">
+        <option>選択してください</option>
+        <script>
+       for(var i = 18; i <= 65; i++){
+           document.write("<option>");
+           document.write(i);
+           document.write("<option>");
+       }
+        </script>
+     </select><br>
+     <label>コメント</label><br>
+     <textarea name="comments" rows="7" cols="35"></textarea><br>
+    <div>
+     <input type="submit" class="submit" value="送信する">
+    </div>
+  </form>
+  </div>       
+ </body>
